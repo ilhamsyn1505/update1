@@ -56,7 +56,7 @@ echo color("green"," =================================== \n");
 				save("token.txt",$token);
 				
 				echo color("green","\n===========(REDEEM VOUCHER)===========");
-				echo "\n".color("yellow","!] Claim Voc GOFOOD021120A");
+				echo "\n".color("yellow","!] Claim Voc GOFOO021120A");
 				echo "\n".color("yellow","!] Please wait...");
 				for($a=1;$a<=3;$a++){
 					echo color("yellow",".");
@@ -70,6 +70,20 @@ echo color("green"," =================================== \n");
 				}else{
 					echo "\n".color("red","-] Message: ".$message);
 					
+					echo "\n".color("yellow","!] Claim Voc PESENGOFOOD");
+					echo "\n".color("yellow","!] Please wait...");
+					for($a=1;$a<=3;$a++){
+						echo color("yellow",".");
+						sleep(1);
+					}
+					sleep(3);
+					$boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESENGOFOOD"}');
+					$messageboba10 = fetch_value($boba10,'"message":"','"');
+					if(strpos($boba10, 'You can use this promo now...')){
+						echo "\n".color("green","+] Message: ".$messageboba10);
+						goto goride;
+					}else{
+						echo "\n".color("red","-] Message: ".$messageboba10);
 					}
 					goride:
 					echo "\n".color("yellow","!] Claim Voc AYOCOBAGOJEK");
