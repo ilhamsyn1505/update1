@@ -138,7 +138,7 @@ echo color("green"," =================================== \n");
 				echo color("yellow","!] Please input again \n");
 				goto otp;
             }
-		}else{
+		else{
 			echo color("red","-] This number already registered");
 			echo color("green", "\n =================================== \n\n");
 			echo color("yellow","!] Please register again using other number \n");
