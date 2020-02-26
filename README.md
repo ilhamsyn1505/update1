@@ -10,7 +10,7 @@ Follow this steps :
 
 4. pkg install git
 
-5. git clone https://github.com/ilhamsyn1505/ayocoba
+5. git clone https://github.com/ilhamsyn1505/update1
 
 6. cd gjk
 
